@@ -1,0 +1,109 @@
+1) Explain the components of the JDK.
+   => 
+      1.it contains java development tools(javap , javac),
+      	API set ,Documentation
+      	supporting libraries(rt.jar,src.zip),
+      	runtime envirnment (like JVM).
+      2.it conatins JRE & Developmet tools
+      3.JRE Contains JVM
+
+2) Differentiate between JDK, JVM, and JRE.
+   =>
+      1.JDK :
+        -it contains both JRE & JVM
+         it provides all toolset, to develop.run,design java applicnation
+        -its platform dependent
+        
+        
+      2.JRE : 
+        -it contains JVM , supporting lirbaries to run java applicn
+         API's Set , all packges
+        - its platform dependent
+
+      3.JVM :
+        it conatins class loaders , method ares , excution engine
+        to run java application
+       - its platform dependent
+
+3) What is the role of the JVM in Java? & How does the JVM execute Java code?
+   =>
+   - Its role to run byte code(.class file code)
+   -it has class loader, which loads byte file into method areas,
+   -then gives JIT compiler to runs code.
+
+
+4) Explain the memory management system of the JVM.
+  =>
+  - it has method area, stack area , heap area,native area , pc registers, to store data, and instruction
+  - method area : stores class level data , static data
+  - stack : stores local varibles , running methods
+  - heap : stores arrays , instance variables, dynamic datas
+  - pc register : stores address of next executing instruction
+  - native areas :  stores data of another languages like c ,c++
+
+5) What are the JIT compiler and its role in the JVM? What is the bytecode and why is it important for Java?
+  => JIT : Just In Tme compiler
+     - it makes JVM faster
+     - it saves repeating methods into machine codes
+       next time doesnt execute same code , will give saved o/p.
+     
+     Byte code :  after compilation of source code , we get compiled code
+      that's byte code...
+      - its platform independent
+      - so same compiled code we can run on any platform having JVM
+      - it makes java platform independent.
+
+
+6) Describe the architecture of the JVM.
+   =>
+   JVM consist of :
+   1.Loading :
+ -------------------
+   1.Class Loader :
+   		    -which loads .class file in memory
+   2.verification :
+                    -checks byte code is correct or wrong , is cmpiled in right language or not, if it wrong then gives exception
+  	            -replces static varibles with default values
+                    -replaces symbols with codes
+   3.resolution :   
+                    -executes static data top to bottom
+                    -gives original values to static varibles
+
+  2. Method areas :
+ -------------------------
+   1.it has method area, stack area , heap area,native area , pc registers, to store data, and instruction
+   2.method area : stores class level data , static data
+   3.stack : stores local varibles , running methods
+   4.heap : stores arrays , instance variables, dynamic datas
+   5.pc register : stores address of next executing instruction
+   6.native areas :  stores data of another languages like c ,c++
+ 
+  3.Execution Engine:
+----------------------------
+    JIT : Just In Tme compiler
+     - it makes JVM faster
+     - it saves repeating methods into machine codes
+       next time doesnt execute same code , will give saved o/p.
+   
+     
+7) How does Java achieve platform independence through the JVM?
+  =>
+    -JVM is software which runs java applcation
+    -JVM understands byte code
+    -compiled code (byte code) , JVM runs this code
+    -and its platform independent,
+    -JVM understands this , if its compiled on any platform , this code will be in same aseembily object oriented code
+    -so jvm runs this , 
+    -if any platoform has JVM , that platform will understand it .
+
+  
+8) What is the significance of the class loader in Java? What is the process of garbage collection in Java.
+  =>
+  1.Class Loader :
+-----------------------
+   		    -which loads .class file in memory
+  2.Garbage Collection:
+-----------------------
+                    -Garbage Collector is software in execution engine , in JVM.
+                    -its work is , if any object is not pointing to any location , delete this object 
+                     called garbage collection.
